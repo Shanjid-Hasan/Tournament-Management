@@ -1,0 +1,31 @@
+{
+  "name": "tournament-management",
+  "version": "1.0.0",
+  "description": "A cricket tournament management app with great features.\r <br>\r Author- Shanjid Hasan & Muntasir Badhan.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shanjid-Hasan/Tournament-Management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shanjid-Hasan/Tournament-Management/issues"
+  },
+  "homepage": "https://github.com/Shanjid-Hasan/Tournament-Management#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
