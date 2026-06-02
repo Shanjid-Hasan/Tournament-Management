@@ -79,7 +79,6 @@ async function generateGroups() {
 
   loadGroups();
 }
-
 async function loadGroups() {
   const response = await fetch(`/api/groups/${tournamentId}`);
 
@@ -89,24 +88,24 @@ async function loadGroups() {
 
   groups.forEach((group) => {
     html += `
-            <div style="
-                border:1px solid #ccc;
-                padding:15px;
-                margin-top:10px;
-            ">
+            <div class="group-card">
 
-                <h3>${group.group_name}</h3>
+                <h3>
+                    ${group.group_name}
+                </h3>
         `;
 
     group.teams.forEach((team) => {
       html += `
-                <div>
+                <div class="group-team">
                     ${team.team_name}
                 </div>
             `;
     });
 
-    html += `</div>`;
+    html += `
+            </div>
+        `;
   });
 
   document.getElementById("groupsSection").innerHTML = html;
@@ -127,28 +126,33 @@ async function loadFixtures() {
 
   const matches = await response.json();
 
-  let html = "<h2>Fixtures</h2>";
+  let html = "";
 
   matches.forEach((match) => {
     html += `
-            <div style="
-                border:1px solid #ddd;
-                padding:10px;
-                margin-top:10px;
-            ">
+            <div class="fixture-card">
 
-                <h4>${match.group_name}</h4>
+                <div class="fixture-stage">
+                    ${match.group_name}
+                </div>
 
-                <p>
+                <div class="fixture-teams">
+
                     ${match.team1}
-                    VS
-                    ${match.team2}
-                </p>
 
-                <p>
-                    Status:
+                    <br>
+
+                    VS
+
+                    <br>
+
+                    ${match.team2}
+
+                </div>
+
+                <div class="fixture-status">
                     ${match.match_status}
-                </p>
+                </div>
 
             </div>
         `;
