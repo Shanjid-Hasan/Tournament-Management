@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Create Tournament</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Create Tournament</h2>
+
+        <form id="tournamentForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Tournament Name"
+                required
+            >
+
+            <input
+                type="number"
+                id="teams"
+                placeholder="Total Teams"
+                required
+            >
+
+            <input
+                type="number"
+                id="overs"
+                placeholder="Overs Per Match"
+                required
+            >
+
+            <input
+                type="number"
+                id="groups"
+                placeholder="Group Count"
+                required
+            >
+
+            <select id="qualification">
+
+                <option value="SEMI_FINAL">
+                    Semi Final
+                </option>
+
+                <option value="QUARTER_FINAL">
+                    Quarter Final
+                </option>
+
+                <option value="DIRECT_FINAL">
+                    Direct Final
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Create Tournament
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="/js/createTournament.js"></script>
+
+</body>
+</html>
